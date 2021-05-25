@@ -1,0 +1,228 @@
+
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style:normal;
+  font-weight: 400;/*400=normal(se le puede poner ambas). Regular significa n ormal que es 400, 300 es la mas delgadita*/
+}
+
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style:normal;
+  font-weight: bold; /*Bold es 600 o 700*/
+}
+
+@font-face{
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+:root{
+  font-size:18px;
+  --gray10:#212121;
+  --gray20:#212429;
+  --gray30:#616161;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: var(--gray30);
+  margin:0px;
+
+}
+
+a{
+  color:var(--gray30);
+}
+
+header{
+font-size: 14px;
+color: var(--gray10);
+/*position: sticky; relative, absolute, fixed, stiky*/
+/*top:0;*/
+/*z-index:1;*/
+width: 188px;
+position: absolute;
+top: 64px;
+left: -202px;
+z-index: 1;
+}
+
+header li{
+  margin-bottom: 16px;
+}
+
+header a{
+  color:var(--gray10);
+  text-decoration:none; /*underline*/
+}
+
+header a:hover{
+  color: pink;
+}
+
+nav details summary{
+  font-weight: bold;
+  line-height: 24px;
+}
+
+h1{
+  font-size:60px;
+  font-weight: normal;
+  margin: 64px;
+  margin-bottom:16px ;
+  /*margin: top right bottom left;*/
+}
+
+h1 ~ p{
+  margin-bottom: 64px;
+}
+
+hr{
+ margin:64px 0;
+}
+
+h2{
+  font-size:2em;
+  margin: 64px 0 40px;
+  font-weight:normal;
+}
+
+h3{
+  font-size: 1.5em;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+  position: relative;
+}
+
+pre{
+  background: #FEC62E;
+  padding: 40px;
+  font-family: 'roboto';
+  line-height: 24px;
+}
+
+blockquote{
+  font-size: 24px;
+  margin: 32px 0;
+  padding-left:16px;
+  line-height: 24px;
+  border-left: 4px solid var(--gray30);
+}
+
+blockquote p span{
+  color:var(--gray10);
+}
+
+blockquote p span::after{
+  content: '-';
+
+}
+
+
+.section-content h3::after{
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: black;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.header{
+  position: sticky;
+  top:0;
+}
+
+
+.header-content{
+   position: relative;
+}
+
+.main{
+
+}
+
+
+.wrapper{
+  width: 902px;
+  margin:auto ;
+}
+
+.main-content{
+  padding: 20px;
+}
+
+.hero{
+  background: linear-gradient(to top, rgba(255, 255, 255, .3), transparent ), url(../images/patron.png);
+  height: 350px;
+}
+
+.section-content{
+
+}
+
+.section-content:last-of-type{
+  margin-top:164px ;
+}
+
+
+.section-content ol li{
+  line-height: 24px ;
+}
+
+.section-content ul li{
+  margin-bottom: 16px;
+}
+
+.section-content + hr{
+   display: none;
+}
+
+.section-content img{
+  margin-top: 40px;
+}
+
+.section-content h3::before{
+  content: counter(titlelist, decimal) '.  ';
+}
+
+.section-content h3{
+  counter-increment: titlelist;
+  padding-bottom:8px ;
+}
+
+.section-content{
+  counter-reset: titlelist;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
